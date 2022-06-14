@@ -13,6 +13,8 @@
 * https://www.waqaszamir.com/publication/zamir-2022-mirnetv2/zamir-2022-mirnetv2.pdf  
 
 можно понять, что задача улучшения качества картинки сейчас развивается в основном в двух направлениях: первое - восстановление с помощью GAN'ов и решение проблем, связанных с ними. Второе - точечное решение проблемы с помощью сверточных нейронных сетей и их модификаций (решение задачи super resolution, denoising, debluring и т.д.).  
+	
+![image](https://user-images.githubusercontent.com/52531828/173533373-f6eb35c4-2f50-4072-beb9-8a645c43d6c2.png)
 
 Если говорить про конкретно выделенные статьи, то в первой рассматривались подходы в целом, для улучшения качества медицинских фотографий. Вторая - про использование метода SP (super resolution) для камер различных телефонов. Третья - про артефакты, которые появляются в результате генерации ганов и борьбы с ними. Четвертая и пятая - достаточно современные подходы для решения задач sp и в целом image enchancment'а.  
 
@@ -60,7 +62,8 @@ PSNR - 29.957596648972494
 Время обработки - 10 секундное видео обрабатывалось 2.5 минуты
 Модель отлично делает upscale, однако до этого нужно убрать шум с картинки.
 
-### MIRNetv2 (https://github.com/swz30/MIRNet)
+### MIRNetv2   
+(https://github.com/swz30/MIRNet)    
 
 <a href="https://colab.research.google.com/drive/1dho25zlQl84ZR3A223V-4DFp5P2YXgIn?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>  
 решает несколько задач: SP, denoising, low-light enchansment
@@ -72,16 +75,18 @@ PSNR - 29.957596648972494
 <p align="center">
 	<img width="400" height="400" src="https://user-images.githubusercontent.com/52531828/173377744-52cd0e9c-ea74-470a-b154-3417047f00b3.jpg">
 	<img width="400" height="400" src="https://user-images.githubusercontent.com/52531828/173377779-9b3c05b5-4ac1-4201-873e-1955f51c02bb.jpg">
-</p>  
-Результаты на зашумленных изображениях
-SSIM  - 0.6983962014317513 
-PSNR - 29.185384360348813    
-Сюда я еще добавлю характеристики, т.к. она неплохо справляется со множеством задач
+</p>    
+
+Результаты на зашумленных изображениях  
+SSIM  - 0.6983962014317513  
+PSNR - 29.185384360348813  
+Сюда я еще добавлю характеристики, т.к. она неплохо справляется со множеством задач  
 Время обработки - 10 секундное видео обрабатывалось 2.5 минуты
 
 
-### PAMI_LUT (https://github.com/HuiZeng/Image-Adaptive-3DLUT)
- <a href="https://colab.research.google.com/drive/1Elq4oGfXyCHcfpyujccmy1Yf8JO3MbJH?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>
+### PAMI_LUT   
+(https://github.com/HuiZeng/Image-Adaptive-3DLUT)  
+<a href="https://colab.research.google.com/drive/1Elq4oGfXyCHcfpyujccmy1Yf8JO3MbJH?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>
  
 она показала себя лучшей с точки зрения времени обработки  повышает разрешение картинки  
 сюда вставлю гифки результатов обработки видео
