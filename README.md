@@ -1,10 +1,10 @@
-# Сравнение моделей для улучшения качества изображения
+# Comparison of sota models to image quality improvement
 > Abstract  
-> Основная цель данной работы - изучить существующие методы улучшения качества картинки, сравнить их характеристики, выбрать наилучшую и написать микро сервис для улучшения качества видео.
+> The main aim of this paper is to investigate existing methods of improving picture quality, compare their characteristics, choose the best one and write a microservice to improve video quality.  
 <p align="center">
 
-## 1) Рассмотрение статей
-Прочитав несколько статей:  
+## 1) Introduction
+After reading several articles:  
 
 * https://arxiv.org/pdf/2011.14132.pdf  
 * https://arxiv.org/pdf/1704.02470.pdf  
@@ -12,15 +12,16 @@
 * https://www4.comp.polyu.edu.hk/~cslzhang/paper/PAMI_LUT.pdf  
 * https://www.waqaszamir.com/publication/zamir-2022-mirnetv2/zamir-2022-mirnetv2.pdf  
 
-можно понять, что задача улучшения качества картинки сейчас развивается в основном в двух направлениях: первое - восстановление с помощью GAN'ов и решение проблем, связанных с ними. Второе - точечное решение проблемы с помощью сверточных нейронных сетей и их модификаций (решение задачи super resolution, denoising, debluring и т.д.).  
+you can understand that the task of improving the picture quality is now evolving mainly in two directions: the first - recovery using GANs and solving the problems associated with them. The second one is the point solution of the problem by means of convolutional neural networks and their modifications (solving the problem of super resolution, denoising, debluring, etc.).  
 	
 ![image](https://user-images.githubusercontent.com/52531828/173533373-f6eb35c4-2f50-4072-beb9-8a645c43d6c2.png)
 
-Если говорить про конкретно выделенные статьи, то в первой рассматривались подходы в целом, для улучшения качества медицинских фотографий. Вторая - про использование метода SP (super resolution) для камер различных телефонов. Третья - про артефакты, которые появляются в результате генерации ганов и борьбы с ними. Четвертая и пятая - достаточно современные подходы для решения задач sp и в целом image enchancment'а.  
+If we talk about the highlighted articles, the first one looked at approaches in general, to improve the quality of medical photos. The second was about using the SP (super resolution) method for the cameras of various phones. The third is about the artefacts that appear as a result of the generation of GAN's and how to deal with them. The fourth and fifth are quite modern approaches to solve problems of sp and image enchancment in general.  
 
-Помимо обычного сравнения я попробовал взять именно те методы, которые помогут улучшить качество распознавания лиц (поэтому так актуальна проблема GAN'ов, ведь в процессе генерации могут возникать значительные артефакты). Изучив статью ( https://arxiv.org/pdf/1805.11519.pdf ), я пришел к выводу, что на начальном этапе стоит изучать методы именно super resolution (хоть и в процессе исследования выяснилось, что задача denoising'а с этим тесно переплетается). К тому же, моя задача больше про изучение общих методов улучшния качества изображений.   
 
-Метрики для сравнения моделей я выбрал классические SSIM и PSNR. Выбор остановился на них, так как хотелось бы построить сравнение по методу: взять картинку, сделать с ней различные преобразования (снизить размерность, наложить шум), восстановить изображение и сравнить его с тем, что было до всех преобразований. И данные метрики идеально подходят для этого.
+In addition to the usual comparison, I tried to take exactly those methods that would improve the quality of face recognition (which is why the problem of GANs is so relevant, because significant artifacts can occur in the process of generation). After studying the article ( https://arxiv.org/pdf/1805.11519.pdf ), I came to a conclusion that at the initial stage I should study the methods of super resolution (although in the process of research it turned out that the task of denoising is closely intertwined with it). In addition, my task is more about studying general methods of improving image quality. But in the process, the assignment was supplemented. It became necessary to pay more attention to denoising and deblurring models.  
+
+I chose classic SSIM and PSNR metrics for model comparison. I chose them because I wanted to make a comparison by method: take an image, do various transformations with it (reduce the dimensionality, impose noise), restore the image and compare it to what it was before all the transformations. And these metrics are perfect for that.  
 <p align="center">
 	<img width="720" height="200" src="https://user-images.githubusercontent.com/52531828/173359294-c17eca23-b92c-41cb-a225-1d04f693d9ad.png">
 </p>
