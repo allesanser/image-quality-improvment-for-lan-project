@@ -54,7 +54,13 @@ I did not take ready-made datasets, as most of the models have already been test
 <p align="center">
 	<img width="100" height="160" src="https://user-images.githubusercontent.com/52531828/173390974-b8d43d62-9ce2-4d2a-9100-fc38d85e7e49.jpg">
 	<img width="240" height="320" src="https://user-images.githubusercontent.com/52531828/173390992-47541113-4d51-482a-b15d-91741e9a9406.jpg">
-</p>
+</p>  
+In the video I used to test the model behaves strangely. Apparently because artificial compression was applied to it. 
+
+
+![a2146c54-64ac-4a54-be0d-690a78f8b910](https://user-images.githubusercontent.com/52531828/174431972-f096f710-03ce-4b7b-aef6-2f956fe98b6b.png)
+![9de84669-ad64-4239-9913-2031b62c8518](https://user-images.githubusercontent.com/52531828/174431974-e43e13f4-a81a-44ea-9242-104cbefb10c7.png)
+
 
 
 
