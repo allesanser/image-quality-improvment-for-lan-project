@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Welcome to tracking page!</title>
+		<link rel="stylesheet" type="text/css" href="static/styles/main-style.css">
+	</head>
+	<body>
+        <section id="container">
+            <div id="controlPanel">
+				<section id="upload-file-controlPanel">
+					<section class="titles">
+						<div id="upload-title">Загрузка файлов</div>
+					</section>
+					<form method="post" action="/upload" enctype="multipart/form-data" class="content" id="upload-form">
+						<input id="upload-file" name="file" type="file" value="Choose file" class="active">
+						<label for="upload-file" id="upload-file-button" class="unselected-file">
+							<span id="upload-file-text">Выбрать файл</span>
+						</label>
+						<input id="submit-file" type="submit" value="Отправить" class="inactive" disabled>
+					</form>
+				</section>
+            </div>
+        </section>
+		<section id="links">
+			<a href="https://github.com/allesanser/image-quality-improvment-for-lan-project">
+				<img src="static/github-icon.png" style="width: 25px;">
+				<p id="github">Ссылка на проект</p>
+			</a>
+		</section>
+	</body>
+	<script type="text/javascript" src="static/scripts/main-app.js"></script>
+</html>
