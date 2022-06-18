@@ -23,10 +23,10 @@ In addition to the usual comparison, I tried to take exactly those methods that 
 
 I chose classic SSIM and PSNR metrics for model comparison. I chose them because I wanted to make a comparison by method: take an image, do various transformations with it (reduce the dimensionality, impose noise), restore the image and compare it to what it was before all the transformations. And these metrics are perfect for that. Here, ${MAX_I}$ is the maximum possible pixel value of the image.  
 <p align="center">
-	<img width="720" height="200" src="https://user-images.githubusercontent.com/52531828/173359294-c17eca23-b92c-41cb-a225-1d04f693d9ad.png">
+	<img width="600" height="150" src="https://user-images.githubusercontent.com/52531828/173359294-c17eca23-b92c-41cb-a225-1d04f693d9ad.png">
 </p>
 <p align="center">
-	<img width="720" height="200" src="https://user-images.githubusercontent.com/52531828/173359383-c2424538-8fe7-430b-b282-cabaca33ec61.png">
+	<img width="600" height="150" src="https://user-images.githubusercontent.com/52531828/173359383-c2424538-8fe7-430b-b282-cabaca33ec61.png">
 </p>
 
 However, these metrics have disadvantages. For example, a blurry picture will give better quality than a picture with clear boundaries but slightly offset from the original picture. I used my own images of different sizes, some of them with random Gaussian noise and small amount of 240\*320 images, as most of the models are geared up for working with images of small sizes. Noise mapping proved to be useful, as some models behaved very strangely.   
@@ -58,10 +58,12 @@ I did not take ready-made datasets, as most of the models have already been test
 In the video I used to test the model behaves strangely. Apparently because artificial compression was applied to it. 
 
 
-![a2146c54-64ac-4a54-be0d-690a78f8b910](https://user-images.githubusercontent.com/52531828/174431972-f096f710-03ce-4b7b-aef6-2f956fe98b6b.png)
-![9de84669-ad64-4239-9913-2031b62c8518](https://user-images.githubusercontent.com/52531828/174431974-e43e13f4-a81a-44ea-9242-104cbefb10c7.png)
-
-
+<p align="center">
+	<img width="640" height="360" src="https://user-images.githubusercontent.com/52531828/174431972-f096f710-03ce-4b7b-aef6-2f956fe98b6b.png">
+</p>
+<p align="center">
+	<img width="640" height="360" src="https://user-images.githubusercontent.com/52531828/174431974-e43e13f4-a81a-44ea-9242-104cbefb10c7.png">
+</p>
 
 
 
@@ -90,7 +92,8 @@ SSIM  - 0.6983962014317513
 PSNR - 29.185384360348813  
 Tried doing the processing by batches. However, the model takes up 14 GB of video memory when the image passes through the network, so it was not possible to test.  
 Overall, the model handles a lot of tasks quite well, but is memory-hungry. (I may have run it wrong. This model is advised to be paralleled) 
-Processing time - a 10-second video was processed in 4.5 minutes 
+Processing time - a 10-second video was processed in 4.5 minutes  
+Added batching processing.
 
 
 ### PAMI_LUT   
@@ -123,13 +126,11 @@ https://github.com/amanchadha/iSeeBetter
 In the process of doing the job, it turned out that a simple upscaling would suffice. The iSeeBetter model was chosen. The model shows excellent results, however it takes an average of 2.3 seconds to process each frame (640\*360) on Tesla T4 , when upscaling is only 2x (1280\*720), 7 GB of video memory is required. A minimum of 16GB of video memory is required to upscale by a factor of 4.  
 ![до](https://user-images.githubusercontent.com/52531828/174415201-b727045b-bede-4d20-acdb-03be04fc942a.png)
 ![после](https://user-images.githubusercontent.com/52531828/174415196-62fdbbc6-b102-46b4-9f9a-2c5417a4c1ed.png)
-
-
-# ToDo  
-* Перевести на английский  
-* добавить описание метрик  
-* сделать обработку изображений батчами, а не по одной   
+ 
 
 
 ## Микро сервис
-Нужно найти оптимальный под видео. Тут сейчас нужно найти годную real time модель, чтобы вдальнейшем запихнуть её в flask сервис.
+The iSeeBetter model is initially added. A minimum of 8 GB of video memory is required to run.
+
+![image](https://user-images.githubusercontent.com/52531828/174435005-e3c1882d-0bc8-439d-a82e-aff9ece02c56.png)
+
