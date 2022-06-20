@@ -131,7 +131,7 @@ In the process of doing the job, it turned out that a simple upscaling would suf
 
 ## Micro web service
 The iSeeBetter model is initially added. A minimum of 8 GB of video memory is required to run. Install dependencies from requirements.txt  
-You can download weights from the iSeeBetter repository (link above). You can upload a video to the website, it outputs a processed one.
+You can download weights from the iSeeBetter repository (link above). You can upload a video to the website, it outputs a processed one. Start the file flsk_server.py
 
 ![image](https://user-images.githubusercontent.com/52531828/174435005-e3c1882d-0bc8-439d-a82e-aff9ece02c56.png)
 
