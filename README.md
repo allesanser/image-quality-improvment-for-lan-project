@@ -135,5 +135,5 @@ You can download weights from the iSeeBetter repository (link above). You can up
 
 ![image](https://user-images.githubusercontent.com/52531828/174435005-e3c1882d-0bc8-439d-a82e-aff9ece02c56.png)
 
-## Further research  
-[Further research](https://github.com/msu-video-group/ERQA)
+## Further research
+https://github.com/msu-video-group/ERQA
