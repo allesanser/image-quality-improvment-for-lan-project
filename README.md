@@ -123,7 +123,7 @@ The model is new and runs extremely slowly. The developers themselves write that
 ### iSeeBetter
 https://github.com/amanchadha/iSeeBetter  
 <a href="https://colab.research.google.com/drive/10aWv_Ou_AibAzFE9Px6WdVxEqeQqmiYX?authuser=1#scrollTo=pZIlhY8UNFST"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>  
-In the process of doing the job, it turned out that a simple upscaling would suffice. The iSeeBetter model was chosen. The model shows excellent results, however it takes an average of 2.3 seconds to process each frame (640\*360) on Tesla T4 , when upscaling is only 2x (1280\*720), 7 GB of video memory is required. A minimum of 16GB of video memory is required to upscale by a factor of 4.  
+In the process of doing the job, it turned out that a simple upscaling would suffice. The iSeeBetter model was chosen. The model shows excellent results, however it takes an average of 2.3 seconds to process each frame (640\*360) on Tesla T4 , when upscaling is only 2x (1280\*720), 7 GB of video memory is required. A minimum of 16GB of video memory is required to upscale by a factor of 4.(The model has been trained for 4 epochs)  
 ![до](https://user-images.githubusercontent.com/52531828/174415201-b727045b-bede-4d20-acdb-03be04fc942a.png)
 ![после](https://user-images.githubusercontent.com/52531828/174415196-62fdbbc6-b102-46b4-9f9a-2c5417a4c1ed.png)
  
