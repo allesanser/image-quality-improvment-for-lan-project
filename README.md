@@ -125,7 +125,8 @@ https://github.com/amanchadha/iSeeBetter
 <a href="https://colab.research.google.com/drive/10aWv_Ou_AibAzFE9Px6WdVxEqeQqmiYX?authuser=1#scrollTo=pZIlhY8UNFST"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>  
 In the process of doing the job, it turned out that a simple upscaling would suffice. The iSeeBetter model was chosen. The model shows excellent results, however it takes an average of 2.3 seconds to process each frame (640\*360) on Tesla T4 , when upscaling is only 2x (1280\*720), 7 GB of video memory is required. A minimum of 16GB of video memory is required to upscale by a factor of 4.(The model has been trained for 4 epochs)  
 ![до](https://user-images.githubusercontent.com/52531828/174415201-b727045b-bede-4d20-acdb-03be04fc942a.png)
-![после](https://user-images.githubusercontent.com/52531828/174415196-62fdbbc6-b102-46b4-9f9a-2c5417a4c1ed.png)
+![после](https://user-images.githubusercontent.com/52531828/174415196-62fdbbc6-b102-46b4-9f9a-2c5417a4c1ed.png)  
+I've tried putting the model into a docker container, but for some reason I'm having trouble loading the pre-trained weights. This is strange, because on the colab and in the process of creating the microservice everything worked. The latter is especially strange because the device, environment, were almost equivalent. Despite this you can download the archive, run it.  https://drive.google.com/file/d/18_SxDlRM5ItTb8TgGPpC5vqmwvT81omm/view?usp=sharing
  
 
 
