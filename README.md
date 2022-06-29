@@ -41,7 +41,8 @@ I did not take ready-made datasets, as most of the models have already been test
 
 ## Running models
 ### I took a popular model to start with  Real-ESRGAN (https://github.com/ai-forever/Real-ESRGAN)
- <a href="https://colab.research.google.com/drive/1dho25zlQl84ZR3A223V-4DFp5P2YXgIn?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>
+ <a href="https://colab.research.google.com/drive/1PWIlutjY7FdgMOdnmW5q_3YRkiyb2N0_?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>
+ 
  <p align="center">
 	<img width="100" height="160" src="https://user-images.githubusercontent.com/52531828/173386929-bdb50123-9012-4165-a337-05d0b50c3e7a.jpg">
 	<img width="240" height="320" src="https://user-images.githubusercontent.com/52531828/173386948-85064451-be59-4a01-a444-f4dca9573d57.jpg">
@@ -55,16 +56,10 @@ I did not take ready-made datasets, as most of the models have already been test
 	<img width="100" height="160" src="https://user-images.githubusercontent.com/52531828/173390974-b8d43d62-9ce2-4d2a-9100-fc38d85e7e49.jpg">
 	<img width="240" height="320" src="https://user-images.githubusercontent.com/52531828/173390992-47541113-4d51-482a-b15d-91741e9a9406.jpg">
 </p>  
-In the video I used to test the model behaves strangely. Apparently because artificial compression was applied to it. 
 
 
-<p align="center">
-	<img width="640" height="360" src="https://user-images.githubusercontent.com/52531828/174431972-f096f710-03ce-4b7b-aef6-2f956fe98b6b.png">
-</p>
-<p align="center">
-	<img width="640" height="360" src="https://user-images.githubusercontent.com/52531828/174431974-e43e13f4-a81a-44ea-9242-104cbefb10c7.png">
-</p>
-
+![до](https://user-images.githubusercontent.com/52531828/176503853-ee98ec4a-d9a9-46a1-9e8d-9eb379374e6e.png)
+![после](https://user-images.githubusercontent.com/52531828/176503894-3b0aab18-149e-4730-8320-0e6855faf8fa.png)  
 
 
 SSIM  - 0.35955440170235103  
@@ -85,7 +80,17 @@ solves several problems: SP, denoising, low-light enchansment
 <p align="center">
 	<img width="400" height="400" src="https://user-images.githubusercontent.com/52531828/173377744-52cd0e9c-ea74-470a-b154-3417047f00b3.jpg">
 	<img width="400" height="400" src="https://user-images.githubusercontent.com/52531828/173377779-9b3c05b5-4ac1-4201-873e-1955f51c02bb.jpg">
-</p>    
+</p> 
+
+In the video I used to test the model behaves strangely. Apparently because artificial compression was applied to it. 
+
+
+<p align="center">
+	<img width="640" height="360" src="https://user-images.githubusercontent.com/52531828/174431972-f096f710-03ce-4b7b-aef6-2f956fe98b6b.png">
+</p>
+<p align="center">
+	<img width="640" height="360" src="https://user-images.githubusercontent.com/52531828/174431974-e43e13f4-a81a-44ea-9242-104cbefb10c7.png">
+</p>
 
 Results on noisy images  
 SSIM  - 0.6983962014317513  
